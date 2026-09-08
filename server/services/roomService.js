@@ -288,8 +288,8 @@ export const getRoomState = async (roomId) => {
     .populate('auctioneer', 'username displayName avatar')
     .populate('teams.owner', 'username displayName avatar')
     .populate('auction.currentPlayer')
-    .populate('auction.playerPool')
-    .populate('teams.squad')
+    .populate('auction.playerPool', 'name role basePrice isOverseas rating image shortName country')
+    .populate('teams.squad', 'name role basePrice isOverseas rating image')
     .populate('teams.squadDetails.player');
   
   if (!room) return null;

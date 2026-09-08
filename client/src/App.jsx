@@ -1,35 +1,35 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import useAuthStore from './store/authStore';
 import useThemeStore from './store/themeStore';
 import Layout from './components/layout/Layout';
 import LoadingSpinner from './components/ui/LoadingSpinner';
 import ErrorBoundary from './components/ui/ErrorBoundary';
 
-// Pages
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Dashboard from './pages/Dashboard';
-import CreateAuction from './pages/CreateAuction';
-import JoinAuction from './pages/JoinAuction';
-import AuctionLobby from './pages/AuctionLobby';
-import LiveAuction from './pages/LiveAuction';
-import PlayerDatabase from './pages/PlayerDatabase';
-import PlayerDetails from './pages/PlayerDetails';
-import PlayerComparison from './pages/PlayerComparison';
-import MyAuctions from './pages/MyAuctions';
-import AuctionHistory from './pages/AuctionHistory';
-import TeamDetails from './pages/TeamDetails';
-import SquadBuilder from './pages/SquadBuilder';
-import PlayingXI from './pages/PlayingXI';
-import AuctionResults from './pages/AuctionResults';
-import TeamComparison from './pages/TeamComparison';
-import Leaderboard from './pages/Leaderboard';
-import TournamentSimulation from './pages/TournamentSimulation';
-import AdminDashboard from './pages/AdminDashboard';
-import Profile from './pages/Profile';
-import NotFound from './pages/NotFound';
+// Lazy-loaded pages for fast initial mobile and browser loading
+const Home = lazy(() => import('./pages/Home'));
+const Login = lazy(() => import('./pages/Login'));
+const Register = lazy(() => import('./pages/Register'));
+const Dashboard = lazy(() => import('./pages/Dashboard'));
+const CreateAuction = lazy(() => import('./pages/CreateAuction'));
+const JoinAuction = lazy(() => import('./pages/JoinAuction'));
+const AuctionLobby = lazy(() => import('./pages/AuctionLobby'));
+const LiveAuction = lazy(() => import('./pages/LiveAuction'));
+const PlayerDatabase = lazy(() => import('./pages/PlayerDatabase'));
+const PlayerDetails = lazy(() => import('./pages/PlayerDetails'));
+const PlayerComparison = lazy(() => import('./pages/PlayerComparison'));
+const MyAuctions = lazy(() => import('./pages/MyAuctions'));
+const AuctionHistory = lazy(() => import('./pages/AuctionHistory'));
+const TeamDetails = lazy(() => import('./pages/TeamDetails'));
+const SquadBuilder = lazy(() => import('./pages/SquadBuilder'));
+const PlayingXI = lazy(() => import('./pages/PlayingXI'));
+const AuctionResults = lazy(() => import('./pages/AuctionResults'));
+const TeamComparison = lazy(() => import('./pages/TeamComparison'));
+const Leaderboard = lazy(() => import('./pages/Leaderboard'));
+const TournamentSimulation = lazy(() => import('./pages/TournamentSimulation'));
+const AdminDashboard = lazy(() => import('./pages/AdminDashboard'));
+const Profile = lazy(() => import('./pages/Profile'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Protected route wrapper
 function ProtectedRoute({ children }) {
@@ -55,8 +55,9 @@ function App() {
   return (
     <Router>
       <ErrorBoundary>
-        <Routes>
-          <Route element={<Layout />}>
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading IPL Arena..." />}>
+          <Routes>
+            <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
@@ -87,6 +88,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
+        </Suspense>
       </ErrorBoundary>
     </Router>
   );
