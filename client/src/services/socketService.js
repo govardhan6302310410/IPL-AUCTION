@@ -14,7 +14,9 @@ class SocketService {
       this.socket.disconnect();
     }
 
-    this.socket = io('http://localhost:5000', {
+    const serverUrl = import.meta.env.VITE_API_URL || (typeof window !== 'undefined' && window.location.hostname !== 'localhost' ? window.location.origin : 'http://localhost:5000');
+
+    this.socket = io(serverUrl, {
       auth: { token },
       transports: ['polling', 'websocket'],
       reconnection: true,

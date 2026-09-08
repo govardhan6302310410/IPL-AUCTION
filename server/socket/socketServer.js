@@ -10,7 +10,7 @@ import { getRoomFilter } from '../services/roomService.js';
 export const initializeSocket = (httpServer) => {
   const io = new Server(httpServer, {
     cors: {
-      origin: 'http://localhost:5173',
+      origin: true,
       credentials: true
     }
   });
