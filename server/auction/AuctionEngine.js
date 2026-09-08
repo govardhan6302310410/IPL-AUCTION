@@ -22,14 +22,21 @@ class AuctionEngine {
   }
 
   async acquireLock(roomId) {
-    while (this.roomLocks.get(roomId)) {
+    const key = roomId ? roomId.toString() : 'default';
+    const start = Date.now();
+    while (this.roomLocks.get(key)) {
+      if (Date.now() - start > 400) {
+        this.roomLocks.delete(key);
+        break;
+      }
       await new Promise(r => setTimeout(r, 10));
     }
-    this.roomLocks.set(roomId, true);
+    this.roomLocks.set(key, true);
   }
 
   releaseLock(roomId) {
-    this.roomLocks.delete(roomId);
+    const key = roomId ? roomId.toString() : 'default';
+    this.roomLocks.delete(key);
   }
 
   broadcast(roomId, event, payload) {

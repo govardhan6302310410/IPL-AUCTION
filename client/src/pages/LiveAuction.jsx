@@ -40,8 +40,25 @@ export default function LiveAuction() {
   const [selectedStrengthTeamId, setSelectedStrengthTeamId] = useState(null);
   const [showQuitModal, setShowQuitModal] = useState(false);
   const [isEndingAuction, setIsEndingAuction] = useState(false);
+  const [isPlacingBid, setIsPlacingBid] = useState(false);
+  const [bidErrorToast, setBidErrorToast] = useState(null);
   
   const messagesEndRef = useRef(null);
+
+  // Sync rejected bid messages and clear bid spinner
+  useEffect(() => {
+    if (bidRejectedMsg) {
+      setBidErrorToast(bidRejectedMsg);
+      setIsPlacingBid(false);
+      const timer = setTimeout(() => setBidErrorToast(null), 3500);
+      return () => clearTimeout(timer);
+    }
+  }, [bidRejectedMsg]);
+
+  // Clear bidding loading state whenever bid or bidder updates
+  useEffect(() => {
+    setIsPlacingBid(false);
+  }, [currentBid, highestBidder]);
 
   const formatRating = (rating) => {
     if (!rating) return '8.5';
@@ -258,6 +275,16 @@ export default function LiveAuction() {
       onBidRejected({ reason: 'Auction is not actively accepting bids' });
       return;
     }
+
+    // Immediate mobile haptic feedback
+    try {
+      if (typeof window !== 'undefined' && window.navigator?.vibrate) {
+        window.navigator.vibrate(25);
+      }
+    } catch {}
+
+    setIsPlacingBid(true);
+    setBidErrorToast(null);
     socketService.placeBid(myTeam._id, amount);
   }, [isAuctioneer, myTeam, auctionStatus, onBidRejected]);
 
@@ -1086,6 +1113,13 @@ export default function LiveAuction() {
         {/* Row 3: Increments & Primary BID Button */}
         {myTeam && !isAuctioneer && (
           <div className="space-y-1.5">
+            {bidErrorToast && (
+              <div className="p-1.5 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-300 text-[10px] font-bold flex items-center gap-1.5">
+                <AlertCircle className="w-3.5 h-3.5 shrink-0 text-rose-400" />
+                <span>{bidErrorToast}</span>
+              </div>
+            )}
+
             <div className="grid grid-cols-4 gap-1.5">
               {[0.20, 0.50, 1.00, 2.00].map(inc => {
                 const amount = nextBid + inc;
@@ -1093,7 +1127,7 @@ export default function LiveAuction() {
                   <button
                     key={inc}
                     onClick={() => handleBid(amount)}
-                    disabled={!canBid || isPending || amount > (myTeam.purse?.remaining || 0)}
+                    disabled={!canBid || isPending || isPlacingBid || amount > (myTeam.purse?.remaining || 0)}
                     className="py-1 px-1 rounded-lg font-mono text-[10px] font-bold transition flex items-center justify-center bg-white/5 hover:bg-white/10 text-white border border-white/10 active:scale-95 disabled:opacity-40"
                   >
                     +{inc.toFixed(2)}
@@ -1105,15 +1139,23 @@ export default function LiveAuction() {
             <div className="flex items-center gap-2">
               <button
                 onClick={() => handleBid(nextBid)}
-                disabled={!canBid || isPending}
+                disabled={!canBid || isPending || isPlacingBid}
                 className={`flex-1 min-h-[44px] py-2 px-3 rounded-xl font-display font-black text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-lg active:scale-95 disabled:opacity-40 ${
                   isLeading 
                     ? 'bg-emerald-600 text-white border border-emerald-400 shadow-emerald-600/30' 
+                    : isPlacingBid
+                    ? 'bg-amber-600 text-white animate-pulse'
                     : 'bg-gradient-to-r from-amber-400 to-amber-500 text-black shadow-amber-500/25 hover:brightness-110'
                 }`}
               >
-                <Gavel className="w-4 h-4" />
-                <span>{isLeading ? 'Leading Bid' : `BID ₹${nextBid.toFixed(2)} Cr`}</span>
+                <Gavel className={`w-4 h-4 ${isPlacingBid ? 'animate-spin' : ''}`} />
+                <span>
+                  {isPlacingBid
+                    ? 'Placing Bid...'
+                    : isLeading
+                    ? 'You Hold the Leading Bid'
+                    : `BID ₹${nextBid.toFixed(2)} Cr`}
+                </span>
               </button>
 
               <div className="text-right px-2 py-1 bg-black/30 rounded-lg border border-white/5 shrink-0">
@@ -1540,6 +1582,13 @@ export default function LiveAuction() {
                 {/* Bidding Controls */}
                 {myTeam && !isAuctioneer && (
                   <div className="w-full flex flex-col gap-2.5 max-w-sm">
+                    {bidErrorToast && (
+                      <div className="p-2 rounded-xl bg-rose-500/20 border border-rose-500/40 text-rose-300 text-xs font-bold flex items-center gap-2">
+                        <AlertCircle className="w-4 h-4 shrink-0 text-rose-400" />
+                        <span>{bidErrorToast}</span>
+                      </div>
+                    )}
+
                     {/* Fast Increments */}
                     <div className="grid grid-cols-4 gap-2">
                       {[0.20, 0.50, 1.00, 2.00].map(inc => {
@@ -1548,7 +1597,7 @@ export default function LiveAuction() {
                           <button
                             key={inc}
                             onClick={() => handleBid(amount)}
-                            disabled={!canBid || isPending || amount > (myTeam.purse?.remaining || 0)}
+                            disabled={!canBid || isPending || isPlacingBid || amount > (myTeam.purse?.remaining || 0)}
                             className="py-2 px-2 rounded-xl font-mono text-xs font-bold transition flex items-center justify-center bg-white/5 hover:bg-white/10 text-white border border-white/10 active:scale-95 disabled:opacity-40"
                           >
                             +{inc.toFixed(2)}
@@ -1560,15 +1609,23 @@ export default function LiveAuction() {
                     {/* Primary BID CTA Button */}
                     <button
                       onClick={() => handleBid(nextBid)}
-                      disabled={!canBid || isPending}
+                      disabled={!canBid || isPending || isPlacingBid}
                       className={`w-full py-3.5 rounded-xl font-display font-black text-base uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-xl active:scale-95 disabled:opacity-40 ${
                         isLeading 
                           ? 'bg-emerald-600 text-white border border-emerald-400 shadow-emerald-600/30' 
+                          : isPlacingBid
+                          ? 'bg-amber-600 text-white animate-pulse'
                           : 'bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-500 text-black shadow-amber-500/25 hover:brightness-110'
                       }`}
                     >
-                      <Gavel className="w-5 h-5" />
-                      <span>{isLeading ? 'You are Leading the Bid' : `BID ₹${nextBid.toFixed(2)} Cr`}</span>
+                      <Gavel className={`w-5 h-5 ${isPlacingBid ? 'animate-spin' : ''}`} />
+                      <span>
+                        {isPlacingBid
+                          ? 'Placing Bid...'
+                          : isLeading
+                          ? 'You are Leading the Bid'
+                          : `BID ₹${nextBid.toFixed(2)} Cr`}
+                      </span>
                     </button>
 
                     {/* Purse Balance Indicator */}

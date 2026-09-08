@@ -36,7 +36,12 @@ export const validateBid = ({ room, player, team, user, amount }) => {
   const adminId = (room.admin?._id || room.admin)?.toString();
 
   if (!team.isAI) {
-    if (teamOwnerId !== userId && adminId !== userId) {
+    const isParticipantOwner = room.participants?.some(p => {
+      const pUid = (p.user?._id || p.user)?.toString();
+      return pUid === userId && p.teamIndex >= 0 && room.teams[p.teamIndex]?._id?.toString() === team._id?.toString();
+    });
+
+    if (teamOwnerId !== userId && adminId !== userId && !isParticipantOwner) {
       return { valid: false, error: 'You do not control this team' };
     }
   } else {
