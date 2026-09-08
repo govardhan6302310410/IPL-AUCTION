@@ -238,18 +238,37 @@ class AuctionEngine {
         return;
       }
 
-      const poolIndex = room.auction.playerPoolIndex;
-      if (poolIndex >= room.auction.playerPool.length) {
-        return this.completeAuction(canonicalRoomId);
+      // Collect all players already sold or in any squad to guarantee NO duplicates
+      const soldSet = new Set((room.auction.soldPlayers || []).map(id => id.toString()));
+      (room.teams || []).forEach(t => {
+        (t.squad || []).forEach(pId => soldSet.add(pId.toString()));
+        (t.squadDetails || []).forEach(sd => {
+          const p = sd.player?._id || sd.player || sd;
+          if (p) soldSet.add(p.toString());
+        });
+      });
+
+      let poolIndex = room.auction.playerPoolIndex || 0;
+      let player = null;
+
+      // Scan through playerPool until we find an un-sold player
+      while (poolIndex < room.auction.playerPool.length) {
+        const candidateId = room.auction.playerPool[poolIndex];
+        poolIndex++;
+        if (!soldSet.has(candidateId.toString())) {
+          player = await Player.findById(candidateId);
+          if (player) {
+            break;
+          }
+        }
       }
 
-      const playerId = room.auction.playerPool[poolIndex];
-      const player = await Player.findById(playerId);
+      // Persist the advanced pool index so the next call gets the next player
+      room.auction.playerPoolIndex = poolIndex;
 
       if (!player) {
-        room.auction.playerPoolIndex += 1;
         await room.save();
-        return this.nominateNextPlayer(canonicalRoomId);
+        return this.completeAuction(canonicalRoomId);
       }
 
       // Check if player is Marquee/Iconic
@@ -337,6 +356,18 @@ class AuctionEngine {
 
       const player = await Player.findById(targetPlayerId);
       if (!player) throw new Error('Player not found');
+
+      // Check if player is already sold
+      const isAlreadySold = (room.auction.soldPlayers || []).some(id => id.toString() === player._id.toString()) ||
+        room.teams.some(t => (t.squad || []).some(id => id.toString() === player._id.toString()));
+      if (isAlreadySold) {
+        throw new Error(`${player.name} has already been sold in this auction.`);
+      }
+
+      // Advance pool index if this was the current pool player
+      if (room.auction.playerPool[room.auction.playerPoolIndex]?.toString() === player._id.toString()) {
+        room.auction.playerPoolIndex += 1;
+      }
 
       // Check if player is Marquee/Iconic
       const isStarPlayer = (player.basePrice >= 2.0) || (player.rating && player.rating >= 88);

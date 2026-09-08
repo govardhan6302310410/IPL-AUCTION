@@ -98,17 +98,12 @@ export default function LiveAuction() {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [chatMessages, mobileTab, activeTab]);
 
-  // Fetch all players for fallback resolution
+  // Pre-load current player pool from room if available
   useEffect(() => {
-    fetch('/api/players?limit=600')
-      .then(res => res.json())
-      .then(data => {
-        if (data && Array.isArray(data.players)) {
-          setAllPlayersPool(data.players);
-        }
-      })
-      .catch(() => {});
-  }, []);
+    if (Array.isArray(room?.auction?.playerPool)) {
+      setAllPlayersPool(room.auction.playerPool.filter(p => typeof p === 'object' && p !== null));
+    }
+  }, [room?.auction?.playerPool]);
 
   // Determine current user role & team
   const currentUserId = (user?._id || user?.id)?.toString();
