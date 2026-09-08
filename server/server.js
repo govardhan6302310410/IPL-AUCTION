@@ -28,6 +28,15 @@ app.use(express.urlencoded({ extended: true }));
 
 import mongoose from 'mongoose';
 
+// Root status route
+app.get('/', (req, res) => {
+  res.status(200).json({
+    status: 'online',
+    message: '🏏 IPL Mega Auction API Server is running live',
+    health: '/api/health'
+  });
+});
+
 // Health check route
 app.get('/api/health', (req, res) => {
   const isDbConnected = mongoose.connection.readyState === 1;
