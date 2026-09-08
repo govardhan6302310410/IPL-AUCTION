@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Environment variables & secrets (CRITICAL: Do not leak DB passwords)
+.env
+.env.local
+.env.*.local
+*.env
+server/.env
+client/.env
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+client/dist/
+
+# Heavy unzipped match files
+server/seed/data/ipl_json/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# System and Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

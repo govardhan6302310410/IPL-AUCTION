@@ -1,0 +1,1629 @@
+{
+  "V Kohli": {
+    "name": "Virat Kohli",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "MS Dhoni": {
+    "name": "MS Dhoni",
+    "country": "India",
+    "role": "Wicketkeeper",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "RG Sharma": {
+    "name": "Rohit Sharma",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "Rohit Sharma": {
+    "name": "Rohit Sharma",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "JJ Bumrah": {
+    "name": "Jasprit Bumrah",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "SA Yadav": {
+    "name": "Suryakumar Yadav",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "Suryakumar Yadav": {
+    "name": "Suryakumar Yadav",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "HH Pandya": {
+    "name": "Hardik Pandya",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast-medium"
+  },
+  "RA Jadeja": {
+    "name": "Ravindra Jadeja",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm orthodox"
+  },
+  "KL Rahul": {
+    "name": "KL Rahul",
+    "country": "India",
+    "role": "Wicketkeeper",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "RR Pant": {
+    "name": "Rishabh Pant",
+    "country": "India",
+    "role": "Wicketkeeper",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "Rishabh Pant": {
+    "name": "Rishabh Pant",
+    "country": "India",
+    "role": "Wicketkeeper",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "Shubman Gill": {
+    "name": "Shubman Gill",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "SV Samson": {
+    "name": "Sanju Samson",
+    "country": "India",
+    "role": "Wicketkeeper",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "Sanju Samson": {
+    "name": "Sanju Samson",
+    "country": "India",
+    "role": "Wicketkeeper",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "DA Warner": {
+    "name": "David Warner",
+    "country": "Australia",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "AB de Villiers": {
+    "name": "AB de Villiers",
+    "country": "South Africa",
+    "role": "Wicketkeeper",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium",
+    "isWicketkeeper": true
+  },
+  "CH Gayle": {
+    "name": "Chris Gayle",
+    "country": "West Indies",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "SK Raina": {
+    "name": "Suresh Raina",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "Suresh Raina": {
+    "name": "Suresh Raina",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "S Dhawan": {
+    "name": "Shikhar Dhawan",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "Shikhar Dhawan": {
+    "name": "Shikhar Dhawan",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "KD Karthik": {
+    "name": "Dinesh Karthik",
+    "country": "India",
+    "role": "Wicketkeeper",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "Dinesh Karthik": {
+    "name": "Dinesh Karthik",
+    "country": "India",
+    "role": "Wicketkeeper",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "AT Rayudu": {
+    "name": "Ambati Rayudu",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "RV Uthappa": {
+    "name": "Robin Uthappa",
+    "country": "India",
+    "role": "Wicketkeeper",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "G Gambhir": {
+    "name": "Gautam Gambhir",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "F du Plessis": {
+    "name": "Faf du Plessis",
+    "country": "South Africa",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "AM Rahane": {
+    "name": "Ajinkya Rahane",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "Ajinkya Rahane": {
+    "name": "Ajinkya Rahane",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "SR Watson": {
+    "name": "Shane Watson",
+    "country": "Australia",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast-medium"
+  },
+  "KA Pollard": {
+    "name": "Kieron Pollard",
+    "country": "West Indies",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "AD Russell": {
+    "name": "Andre Russell",
+    "country": "West Indies",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "SP Narine": {
+    "name": "Sunil Narine",
+    "country": "West Indies",
+    "role": "All-Rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "Rashid Khan": {
+    "name": "Rashid Khan",
+    "country": "Afghanistan",
+    "role": "Spin Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "YS Chahal": {
+    "name": "Yuzvendra Chahal",
+    "country": "India",
+    "role": "Spin Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "Yuzvendra Chahal": {
+    "name": "Yuzvendra Chahal",
+    "country": "India",
+    "role": "Spin Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "PP Chawla": {
+    "name": "Piyush Chawla",
+    "country": "India",
+    "role": "Spin Bowler",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "R Ashwin": {
+    "name": "Ravichandran Ashwin",
+    "country": "India",
+    "role": "Spin Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "B Kumar": {
+    "name": "Bhuvneshwar Kumar",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium-fast"
+  },
+  "Bhuvneshwar Kumar": {
+    "name": "Bhuvneshwar Kumar",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium-fast"
+  },
+  "Mohammed Shami": {
+    "name": "Mohammed Shami",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "Mohammed Siraj": {
+    "name": "Mohammed Siraj",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "SL Malinga": {
+    "name": "Lasith Malinga",
+    "country": "Sri Lanka",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "A Mishra": {
+    "name": "Amit Mishra",
+    "country": "India",
+    "role": "Spin Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "Harbhajan Singh": {
+    "name": "Harbhajan Singh",
+    "country": "India",
+    "role": "Spin Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "DJ Bravo": {
+    "name": "Dwayne Bravo",
+    "country": "West Indies",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium-fast"
+  },
+  "UT Yadav": {
+    "name": "Umesh Yadav",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "TA Boult": {
+    "name": "Trent Boult",
+    "country": "New Zealand",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Left-arm fast"
+  },
+  "Trent Boult": {
+    "name": "Trent Boult",
+    "country": "New Zealand",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Left-arm fast"
+  },
+  "K Rabada": {
+    "name": "Kagiso Rabada",
+    "country": "South Africa",
+    "role": "Fast Bowler",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "MA Starc": {
+    "name": "Mitchell Starc",
+    "country": "Australia",
+    "role": "Fast Bowler",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm fast"
+  },
+  "Mitchell Starc": {
+    "name": "Mitchell Starc",
+    "country": "Australia",
+    "role": "Fast Bowler",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm fast"
+  },
+  "PJ Cummins": {
+    "name": "Pat Cummins",
+    "country": "Australia",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "Pat Cummins": {
+    "name": "Pat Cummins",
+    "country": "Australia",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "JC Buttler": {
+    "name": "Jos Buttler",
+    "country": "England",
+    "role": "Wicketkeeper",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "Jos Buttler": {
+    "name": "Jos Buttler",
+    "country": "England",
+    "role": "Wicketkeeper",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "N Pooran": {
+    "name": "Nicholas Pooran",
+    "country": "West Indies",
+    "role": "Wicketkeeper",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "Nicholas Pooran": {
+    "name": "Nicholas Pooran",
+    "country": "West Indies",
+    "role": "Wicketkeeper",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "H Klaasen": {
+    "name": "Heinrich Klaasen",
+    "country": "South Africa",
+    "role": "Wicketkeeper",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak",
+    "isWicketkeeper": true
+  },
+  "TM Head": {
+    "name": "Travis Head",
+    "country": "Australia",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "Travis Head": {
+    "name": "Travis Head",
+    "country": "Australia",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "GJ Maxwell": {
+    "name": "Glenn Maxwell",
+    "country": "Australia",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "Glenn Maxwell": {
+    "name": "Glenn Maxwell",
+    "country": "Australia",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "Q de Kock": {
+    "name": "Quinton de Kock",
+    "country": "South Africa",
+    "role": "Wicketkeeper",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "Ishan Kishan": {
+    "name": "Ishan Kishan",
+    "country": "India",
+    "role": "Wicketkeeper",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "YBK Jaiswal": {
+    "name": "Yashasvi Jaiswal",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "RD Gaikwad": {
+    "name": "Ruturaj Gaikwad",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "Ruturaj Gaikwad": {
+    "name": "Ruturaj Gaikwad",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "SS Iyer": {
+    "name": "Shreyas Iyer",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "Shreyas Iyer": {
+    "name": "Shreyas Iyer",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "Kuldeep Yadav": {
+    "name": "Kuldeep Yadav",
+    "country": "India",
+    "role": "Spin Bowler",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm chinaman"
+  },
+  "AR Patel": {
+    "name": "Axar Patel",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm orthodox"
+  },
+  "Axar Patel": {
+    "name": "Axar Patel",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm orthodox"
+  },
+  "Arshdeep Singh": {
+    "name": "Arshdeep Singh",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm fast-medium"
+  },
+  "V Sehwag": {
+    "name": "Virender Sehwag",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "SR Tendulkar": {
+    "name": "Sachin Tendulkar",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "SC Ganguly": {
+    "name": "Sourav Ganguly",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "R Dravid": {
+    "name": "Rahul Dravid",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "Yuvraj Singh": {
+    "name": "Yuvraj Singh",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm orthodox"
+  },
+  "A Nehra": {
+    "name": "Ashish Nehra",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Left-arm medium-fast"
+  },
+  "Z Khan": {
+    "name": "Zaheer Khan",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Left-arm fast-medium"
+  },
+  "MK Pandey": {
+    "name": "Manish Pandey",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "DA Miller": {
+    "name": "David Miller",
+    "country": "South Africa",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "YK Pathan": {
+    "name": "Yusuf Pathan",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "N Rana": {
+    "name": "Nitish Rana",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "WP Saha": {
+    "name": "Wriddhiman Saha",
+    "country": "India",
+    "role": "Wicketkeeper",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "BB McCullum": {
+    "name": "Brendon McCullum",
+    "country": "New Zealand",
+    "role": "Wicketkeeper",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium",
+    "isWicketkeeper": true
+  },
+  "PA Patel": {
+    "name": "Parthiv Patel",
+    "country": "India",
+    "role": "Wicketkeeper",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "MA Agarwal": {
+    "name": "Mayank Agarwal",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "None"
+  },
+  "M Vijay": {
+    "name": "Murali Vijay",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "B Sai Sudharsan": {
+    "name": "Sai Sudharsan",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "SPD Smith": {
+    "name": "Steve Smith",
+    "country": "Australia",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "SE Marsh": {
+    "name": "Shaun Marsh",
+    "country": "Australia",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm orthodox"
+  },
+  "JH Kallis": {
+    "name": "Jacques Kallis",
+    "country": "South Africa",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast-medium"
+  },
+  "DR Smith": {
+    "name": "Dwayne Smith",
+    "country": "West Indies",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "RA Tripathi": {
+    "name": "Rahul Tripathi",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "D Padikkal": {
+    "name": "Devdutt Padikkal",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "MP Stoinis": {
+    "name": "Marcus Stoinis",
+    "country": "Australia",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium-fast"
+  },
+  "KS Williamson": {
+    "name": "Kane Williamson",
+    "country": "New Zealand",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "S Dube": {
+    "name": "Shivam Dube",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "AJ Finch": {
+    "name": "Aaron Finch",
+    "country": "Australia",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Left-arm orthodox"
+  },
+  "AC Gilchrist": {
+    "name": "Adam Gilchrist",
+    "country": "Australia",
+    "role": "Wicketkeeper",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm offbreak",
+    "isWicketkeeper": true
+  },
+  "JP Duminy": {
+    "name": "JP Duminy",
+    "country": "South Africa",
+    "role": "All-Rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "KH Pandya": {
+    "name": "Krunal Pandya",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm orthodox"
+  },
+  "MEK Hussey": {
+    "name": "Michael Hussey",
+    "country": "Australia",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "PP Shaw": {
+    "name": "Prithvi Shaw",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "R Parag": {
+    "name": "Riyan Parag",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "P Simran Singh": {
+    "name": "Prabhsimran Singh",
+    "country": "India",
+    "role": "Wicketkeeper",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "Prabhsimran Singh": {
+    "name": "Prabhsimran Singh",
+    "country": "India",
+    "role": "Wicketkeeper",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "MR Marsh": {
+    "name": "Mitchell Marsh",
+    "country": "Australia",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium-fast"
+  },
+  "KK Nair": {
+    "name": "Karun Nair",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "MK Tiwary": {
+    "name": "Manoj Tiwary",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "KC Sangakkara": {
+    "name": "Kumar Sangakkara",
+    "country": "Sri Lanka",
+    "role": "Wicketkeeper",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm offbreak",
+    "isWicketkeeper": true
+  },
+  "VR Iyer": {
+    "name": "Venkatesh Iyer",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "JM Bairstow": {
+    "name": "Jonny Bairstow",
+    "country": "England",
+    "role": "Wicketkeeper",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium",
+    "isWicketkeeper": true
+  },
+  "AK Markram": {
+    "name": "Aiden Markram",
+    "country": "South Africa",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "RM Patidar": {
+    "name": "Rajat Patidar",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "SO Hetmyer": {
+    "name": "Shimron Hetmyer",
+    "country": "West Indies",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "None"
+  },
+  "NV Ojha": {
+    "name": "Naman Ojha",
+    "country": "India",
+    "role": "Wicketkeeper",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "DJ Hooda": {
+    "name": "Deepak Hooda",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "SS Tiwary": {
+    "name": "Saurabh Tiwary",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "None"
+  },
+  "S Badrinath": {
+    "name": "Subramaniam Badrinath",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "EJG Morgan": {
+    "name": "Eoin Morgan",
+    "country": "England",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "BJ Hodge": {
+    "name": "Brad Hodge",
+    "country": "Australia",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "RK Singh": {
+    "name": "Rinku Singh",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "CA Lynn": {
+    "name": "Chris Lynn",
+    "country": "Australia",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Left-arm orthodox"
+  },
+  "DJ Hussey": {
+    "name": "David Hussey",
+    "country": "Australia",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "R Tewatia": {
+    "name": "Rahul Tewatia",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "PD Salt": {
+    "name": "Phil Salt",
+    "country": "England",
+    "role": "Wicketkeeper",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "V Shankar": {
+    "name": "Vijay Shankar",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "KM Jadhav": {
+    "name": "Kedar Jadhav",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "A Badoni": {
+    "name": "Ayush Badoni",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "MM Ali": {
+    "name": "Moeen Ali",
+    "country": "England",
+    "role": "All-Rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "TM Dilshan": {
+    "name": "Tillakaratne Dilshan",
+    "country": "Sri Lanka",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "TH David": {
+    "name": "Tim David",
+    "country": "Australia",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "JM Sharma": {
+    "name": "Jitesh Sharma",
+    "country": "India",
+    "role": "Wicketkeeper",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "ML Hayden": {
+    "name": "Matthew Hayden",
+    "country": "Australia",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "M Vohra": {
+    "name": "Manan Vohra",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "DP Conway": {
+    "name": "Devon Conway",
+    "country": "New Zealand",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "LMP Simmons": {
+    "name": "Lendl Simmons",
+    "country": "West Indies",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "LS Livingstone": {
+    "name": "Liam Livingstone",
+    "country": "England",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "C Green": {
+    "name": "Cameron Green",
+    "country": "Australia",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast-medium"
+  },
+  "V Suryavanshi": {
+    "name": "Vaibhav Suryavanshi",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm orthodox"
+  },
+  "KP Pietersen": {
+    "name": "Kevin Pietersen",
+    "country": "England",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "MC Henriques": {
+    "name": "Moises Henriques",
+    "country": "Australia",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium-fast"
+  },
+  "T Stubbs": {
+    "name": "Tristan Stubbs",
+    "country": "South Africa",
+    "role": "Wicketkeeper",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak",
+    "isWicketkeeper": true
+  },
+  "Y Venugopal Rao": {
+    "name": "Venugopal Rao",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "A Symonds": {
+    "name": "Andrew Symonds",
+    "country": "Australia",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "CL White": {
+    "name": "Cameron White",
+    "country": "Australia",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "BA Stokes": {
+    "name": "Ben Stokes",
+    "country": "England",
+    "role": "All-Rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm fast-medium"
+  },
+  "HH Gibbs": {
+    "name": "Herschelle Gibbs",
+    "country": "South Africa",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "A Raghuvanshi": {
+    "name": "Angkrish Raghuvanshi",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Left-arm orthodox"
+  },
+  "STR Binny": {
+    "name": "Stuart Binny",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "RD Rickelton": {
+    "name": "Ryan Rickelton",
+    "country": "South Africa",
+    "role": "Wicketkeeper",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "MS Bisla": {
+    "name": "Manvinder Bisla",
+    "country": "India",
+    "role": "Wicketkeeper",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "None",
+    "isWicketkeeper": true
+  },
+  "N Wadhera": {
+    "name": "Nehal Wadhera",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "M Shahrukh Khan": {
+    "name": "Shahrukh Khan",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "ST Jayasuriya": {
+    "name": "Sanath Jayasuriya",
+    "country": "Sri Lanka",
+    "role": "All-Rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm orthodox"
+  },
+  "SN Khan": {
+    "name": "Sarfaraz Khan",
+    "country": "India",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "GC Smith": {
+    "name": "Graeme Smith",
+    "country": "South Africa",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "AD Mathews": {
+    "name": "Angelo Mathews",
+    "country": "Sri Lanka",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "AM Nayar": {
+    "name": "Abhishek Nayar",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "GJ Bailey": {
+    "name": "George Bailey",
+    "country": "Australia",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "E Lewis": {
+    "name": "Evin Lewis",
+    "country": "West Indies",
+    "role": "Batter",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "None"
+  },
+  "CH Morris": {
+    "name": "Chris Morris",
+    "country": "South Africa",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast-medium"
+  },
+  "JJ Roy": {
+    "name": "Jason Roy",
+    "country": "England",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "D Brevis": {
+    "name": "Dewald Brevis",
+    "country": "South Africa",
+    "role": "Batter",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "HV Patel": {
+    "name": "Harshal Patel",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium-fast"
+  },
+  "MM Sharma": {
+    "name": "Mohit Sharma",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium-fast"
+  },
+  "SN Thakur": {
+    "name": "Shardul Thakur",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium-fast"
+  },
+  "JD Unadkat": {
+    "name": "Jaydev Unadkat",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Left-arm medium-fast"
+  },
+  "CV Varun": {
+    "name": "Varun Chakravarthy",
+    "country": "India",
+    "role": "Spin Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "R Vinay Kumar": {
+    "name": "Vinay Kumar",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "DW Steyn": {
+    "name": "Dale Steyn",
+    "country": "South Africa",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "DL Chahar": {
+    "name": "Deepak Chahar",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium-fast"
+  },
+  "I Sharma": {
+    "name": "Ishant Sharma",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast-medium"
+  },
+  "KK Ahmed": {
+    "name": "Khaleel Ahmed",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Left-arm fast-medium"
+  },
+  "M Prasidh Krishna": {
+    "name": "Prasidh Krishna",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "RP Singh": {
+    "name": "RP Singh",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Left-arm fast-medium"
+  },
+  "P Kumar": {
+    "name": "Praveen Kumar",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "PP Ojha": {
+    "name": "Pragyan Ojha",
+    "country": "India",
+    "role": "Spin Bowler",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm orthodox"
+  },
+  "DS Kulkarni": {
+    "name": "Dhawal Kulkarni",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium-fast"
+  },
+  "JA Morkel": {
+    "name": "Albie Morkel",
+    "country": "South Africa",
+    "role": "All-Rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm medium-fast"
+  },
+  "JC Archer": {
+    "name": "Jofra Archer",
+    "country": "England",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "KV Sharma": {
+    "name": "Karn Sharma",
+    "country": "India",
+    "role": "Spin Bowler",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "IK Pathan": {
+    "name": "Irfan Pathan",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm medium-fast"
+  },
+  "M Morkel": {
+    "name": "Morne Morkel",
+    "country": "South Africa",
+    "role": "Fast Bowler",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "L Balaji": {
+    "name": "Lakshmipathy Balaji",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium-fast"
+  },
+  "RD Chahar": {
+    "name": "Rahul Chahar",
+    "country": "India",
+    "role": "Spin Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "MM Patel": {
+    "name": "Munaf Patel",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium-fast"
+  },
+  "T Natarajan": {
+    "name": "T Natarajan",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm medium-fast"
+  },
+  "JR Hazlewood": {
+    "name": "Josh Hazlewood",
+    "country": "Australia",
+    "role": "Fast Bowler",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm fast-medium"
+  },
+  "MJ McClenaghan": {
+    "name": "Mitchell McClenaghan",
+    "country": "New Zealand",
+    "role": "Fast Bowler",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm fast-medium"
+  },
+  "R Bhatia": {
+    "name": "Rajat Bhatia",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "JO Holder": {
+    "name": "Jason Holder",
+    "country": "West Indies",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast-medium"
+  },
+  "AB Dinda": {
+    "name": "Ashok Dinda",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium-fast"
+  },
+  "SK Trivedi": {
+    "name": "Siddharth Trivedi",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium"
+  },
+  "M Muralitharan": {
+    "name": "Muttiah Muralitharan",
+    "country": "Sri Lanka",
+    "role": "Spin Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak"
+  },
+  "MG Johnson": {
+    "name": "Mitchell Johnson",
+    "country": "Australia",
+    "role": "Fast Bowler",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm fast"
+  },
+  "JP Faulkner": {
+    "name": "James Faulkner",
+    "country": "Australia",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Left-arm fast-medium"
+  },
+  "A Nortje": {
+    "name": "Anrich Nortje",
+    "country": "South Africa",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "SM Curran": {
+    "name": "Sam Curran",
+    "country": "England",
+    "role": "All-Rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm medium-fast"
+  },
+  "S Kaul": {
+    "name": "Siddharth Kaul",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium-fast"
+  },
+  "SK Warne": {
+    "name": "Shane Warne",
+    "country": "Australia",
+    "role": "Spin Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "TU Deshpande": {
+    "name": "Tushar Deshpande",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium-fast"
+  },
+  "LH Ferguson": {
+    "name": "Lockie Ferguson",
+    "country": "New Zealand",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "S Gopal": {
+    "name": "Shreyas Gopal",
+    "country": "India",
+    "role": "Spin Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "NM Coulter-Nile": {
+    "name": "Nathan Coulter-Nile",
+    "country": "Australia",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "S Nadeem": {
+    "name": "Shahbaz Nadeem",
+    "country": "India",
+    "role": "Spin Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Left-arm orthodox"
+  },
+  "TG Southee": {
+    "name": "Tim Southee",
+    "country": "New Zealand",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium-fast"
+  },
+  "SB Jakati": {
+    "name": "Shadab Jakati",
+    "country": "India",
+    "role": "Spin Bowler",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm orthodox"
+  },
+  "VG Arora": {
+    "name": "Vaibhav Arora",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast-medium"
+  },
+  "M Pathirana": {
+    "name": "Matheesha Pathirana",
+    "country": "Sri Lanka",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "PWH de Silva": {
+    "name": "Wanindu Hasaranga",
+    "country": "Sri Lanka",
+    "role": "Spin Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "A Kumble": {
+    "name": "Anil Kumble",
+    "country": "India",
+    "role": "Spin Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "RJ Harris": {
+    "name": "Ryan Harris",
+    "country": "Australia",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "M Jansen": {
+    "name": "Marco Jansen",
+    "country": "South Africa",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Left-arm fast"
+  },
+  "S Aravind": {
+    "name": "Sreenath Aravind",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm medium-fast"
+  },
+  "VR Aaron": {
+    "name": "Varun Aaron",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "AJ Tye": {
+    "name": "Andrew Tye",
+    "country": "Australia",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium-fast"
+  },
+  "L Ngidi": {
+    "name": "Lungi Ngidi",
+    "country": "South Africa",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "Umesh Yadav": {
+    "name": "Umesh Yadav",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "Piyush Chawla": {
+    "name": "Piyush Chawla",
+    "country": "India",
+    "role": "Spin Bowler",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm legbreak"
+  },
+  "Harshit Rana": {
+    "name": "Harshit Rana",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "Mayank Yadav": {
+    "name": "Mayank Yadav",
+    "country": "India",
+    "role": "Fast Bowler",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
+  },
+  "Abhishek Sharma": {
+    "name": "Abhishek Sharma",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Left-arm orthodox"
+  },
+  "Nitish Kumar Reddy": {
+    "name": "Nitish Kumar Reddy",
+    "country": "India",
+    "role": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium-fast"
+  }
+}
