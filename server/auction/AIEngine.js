@@ -110,17 +110,15 @@ export function aiBidDecision({ room, team, player, currentBid, nextBid }) {
   
   // Check if next bid is within willingness
   if (nextBid <= maxWillingBid) {
-    // Variable human-like delay:
-    // Fast reaction (1.0s - 1.6s) if it's an opening bid or high-urgency star
-    // Thoughtful reaction (1.8s - 2.8s) if price is climbing close to willingness
+    // Human-like natural reaction delays (2.5s - 5.5s) so real human players have ample time to bid!
     const priceRatio = nextBid / maxWillingBid;
     let delayMs;
     if (priceRatio < 0.5) {
-      delayMs = Math.floor(Math.random() * (1600 - 1000 + 1) + 1000);
+      delayMs = Math.floor(Math.random() * (3800 - 2500 + 1) + 2500);
     } else if (priceRatio < 0.8) {
-      delayMs = Math.floor(Math.random() * (2200 - 1400 + 1) + 1400);
+      delayMs = Math.floor(Math.random() * (4600 - 3000 + 1) + 3000);
     } else {
-      delayMs = Math.floor(Math.random() * (2900 - 2000 + 1) + 2000);
+      delayMs = Math.floor(Math.random() * (5500 - 3800 + 1) + 3800);
     }
     
     return { shouldBid: true, bidAmount: nextBid, delayMs, maxWillingBid };

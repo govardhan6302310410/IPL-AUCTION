@@ -60,6 +60,24 @@ export default function LiveAuction() {
     setIsPlacingBid(false);
   }, [currentBid, highestBidder]);
 
+  // Smooth continuous local timer countdown (immune to network packet latency)
+  const [localTimer, setLocalTimer] = useState(timer || 15);
+  const targetEndTimeRef = useRef(Date.now() + (timer || 15) * 1000);
+
+  useEffect(() => {
+    setLocalTimer(timer);
+    targetEndTimeRef.current = Date.now() + timer * 1000;
+  }, [timer]);
+
+  useEffect(() => {
+    if (auctionStatus !== 'BIDDING') return;
+    const interval = setInterval(() => {
+      const remainingSec = Math.max(0, Math.ceil((targetEndTimeRef.current - Date.now()) / 1000));
+      setLocalTimer(remainingSec);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [auctionStatus]);
+
   const formatRating = (rating) => {
     if (!rating) return '8.5';
     const val = typeof rating === 'object' ? (rating.overall ?? 8.5) : rating;
@@ -461,7 +479,7 @@ export default function LiveAuction() {
     );
   }
 
-  const isTimerCritical = timer <= 3 && timer > 0;
+  const isTimerCritical = localTimer <= 3 && localTimer > 0;
 
   // =========================================================================
   // REUSABLE TAB RENDERERS: Franchises, Live Chat, Pool, Squad Strength, Stats
@@ -1099,14 +1117,14 @@ export default function LiveAuction() {
           </div>
 
           <div className={`px-2.5 py-1 rounded-lg font-mono font-black text-xs border flex items-center gap-1 shadow-sm shrink-0 ${
-            timer <= 5 
+            localTimer <= 5 
               ? 'bg-rose-500/20 text-rose-400 border-rose-500/40 animate-pulse' 
-              : timer <= 10 
+              : localTimer <= 10 
               ? 'bg-amber-500/20 text-amber-300 border-amber-500/30' 
               : 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30'
           }`}>
             <Clock className="w-3.5 h-3.5" />
-            <span>{timer}s</span>
+            <span>{localTimer}s</span>
           </div>
         </div>
 
@@ -1539,15 +1557,15 @@ export default function LiveAuction() {
                   <div className={`w-32 h-32 rounded-full border-4 flex flex-col items-center justify-center relative transition-all duration-300 ${
                     isTimerCritical 
                       ? 'border-red-500 shadow-[0_0_30px_rgba(239,68,68,0.5)] scale-105' 
-                      : timer <= 10 
+                      : localTimer <= 10 
                       ? 'border-yellow-500 shadow-[0_0_20px_rgba(245,166,35,0.3)]' 
                       : 'border-[var(--broadcast-border)]'
                   }`}>
                     <span className="text-[10px] text-[var(--text-muted)] uppercase tracking-widest">Seconds</span>
                     <span className={`font-display font-black text-5xl transition-colors ${
-                      isTimerCritical ? 'text-red-500 animate-ping-subtle' : timer <= 10 ? 'text-yellow-400' : 'text-white'
+                      isTimerCritical ? 'text-red-500 animate-ping-subtle' : localTimer <= 10 ? 'text-yellow-400' : 'text-white'
                     }`}>
-                      {timer}
+                      {localTimer}
                     </span>
                     {isTimerCritical && (
                       <span className="text-[9px] font-bold text-red-400 uppercase tracking-widest mt-0.5">Going!</span>

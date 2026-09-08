@@ -444,49 +444,49 @@ class AuctionEngine {
       if (!team) return { success: false, error: 'No team claimed by user in this room' };
       const user = { _id: userId };
 
-      const validation = validateBid({ room, player, team, user, amount });
+      // Smart Auto-Catchup for Human Bids:
+      // If user tapped BID during network latency and an AI bid just pushed the price by 1 increment,
+      // seamlessly upgrade to the current legal next bid if the user can afford it!
+      let effectiveAmount = Number(amount);
+      const expectedNext = room.auction.currentBid === 0
+        ? (player?.basePrice || 0.2)
+        : parseFloat((room.auction.currentBid + (room.settings.bidIncrement || 0.25)).toFixed(2));
+
+      if (!team.isAI && effectiveAmount < expectedNext) {
+        const gap = parseFloat((expectedNext - effectiveAmount).toFixed(2));
+        const inc = room.settings.bidIncrement || 0.25;
+        if (gap <= inc + 0.05) {
+          const legalCheck = checkTeamCanLegallyBid(team, player, expectedNext, room.settings);
+          if (legalCheck.canBid) {
+            effectiveAmount = expectedNext;
+          }
+        }
+      }
+
+      const validation = validateBid({ room, player, team, user, amount: effectiveAmount });
       if (!validation.valid) {
         return { success: false, error: validation.error };
       }
 
-      // Record bid
+      // Record in-memory immediately for zero-latency response
       const bidOrder = (room.auction.bidCount || 0) + 1;
-      const bid = await Bid.create({
-        roomId: canonicalRoomId,
-        player: player._id,
-        team: team._id,
-        teamName: team.name,
-        teamShortName: team.shortName,
-        teamColor: team.primaryColor,
-        user: userId,
-        amount,
-        bidOrder,
-        isAI: team.isAI
-      });
-
-      room.auction.currentBid = amount;
+      room.auction.currentBid = effectiveAmount;
       room.auction.currentBidder = team._id;
       room.auction.currentBidderUser = userId;
       room.auction.bidCount = bidOrder;
 
-      // Reset timer on valid bid
       const timerDuration = room.settings.bidTimer || 15;
       room.auction.timerEndTime = new Date(Date.now() + timerDuration * 1000);
       room.auction.timerDuration = timerDuration;
-      await room.save();
 
-      await AuctionEvent.create({
-        roomId: canonicalRoomId,
-        type: 'BID_ACCEPTED',
-        data: { team: team.name, amount, player: player.name }
-      });
-
+      // Smart anti-snipe timer extension
       timerManager.resetTimer(canonicalRoomId, timerDuration);
 
-      const nextMinBid = parseFloat((amount + (room.settings.bidIncrement || 0.25)).toFixed(2));
+      const nextMinBid = parseFloat((effectiveAmount + (room.settings.bidIncrement || 0.25)).toFixed(2));
 
+      // 1. INSTANT BROADCAST IN MEMORY (< 10ms - zero database blocking!)
       this.broadcast(canonicalRoomId, 'bid:update', {
-        currentBid: amount,
+        currentBid: effectiveAmount,
         highestBidder: {
           _id: team._id,
           teamId: team._id,
@@ -498,28 +498,49 @@ class AuctionEngine {
           user: userId
         },
         nextMinBid,
-        bidCount: bidOrder,
-        bid
+        bidCount: bidOrder
       });
 
       this.broadcast(canonicalRoomId, 'chat:broadcast', {
         _id: `${Date.now()}_bid_${bidOrder}`,
         user: team.shortName,
         senderName: team.name,
-        message: `⚡ ${team.name} bid ₹${amount.toFixed(2)} Cr on ${player.name}`,
-        text: `⚡ ${team.name} bid ₹${amount.toFixed(2)} Cr on ${player.name}`,
+        message: `⚡ ${team.name} bid ₹${effectiveAmount.toFixed(2)} Cr on ${player.name}`,
+        text: `⚡ ${team.name} bid ₹${effectiveAmount.toFixed(2)} Cr on ${player.name}`,
         timestamp: new Date().toISOString(),
         isSystem: true,
         type: 'BID',
         teamShortName: team.shortName,
         teamColor: team.primaryColor,
-        amount
+        amount: effectiveAmount
       });
-      
-      // Hook AI
+
+      // 2. Persist to MongoDB in background asynchronously
+      Promise.all([
+        room.save(),
+        Bid.create({
+          roomId: canonicalRoomId,
+          player: player._id,
+          team: team._id,
+          teamName: team.name,
+          teamShortName: team.shortName,
+          teamColor: team.primaryColor,
+          user: userId,
+          amount: effectiveAmount,
+          bidOrder,
+          isAI: team.isAI
+        }),
+        AuctionEvent.create({
+          roomId: canonicalRoomId,
+          type: 'BID_ACCEPTED',
+          data: { team: team.name, amount: effectiveAmount, player: player.name }
+        })
+      ]).catch(err => console.error('Background DB save error:', err));
+
+      // 3. Hook AI with natural human reaction delay
       this.triggerAIBidCheck(canonicalRoomId, player, nextMinBid);
 
-      return { success: true, bid };
+      return { success: true };
     } finally {
       this.releaseLock(roomId);
     }
